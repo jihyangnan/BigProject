@@ -1,0 +1,268 @@
+@charset "utf-8";
+/*
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+*/
+h4, h5, h6,
+h1, h2, h3 {margin-top: 0;}
+ul, ol ol, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, button {margin:0; padding:0;}
+ul,li,ol{ list-style:none; margin:0; padding:0;}
+img {border:0}
+button {border:0; background:transparent;}
+p {margin: 0;}
+html, body{
+	font-family: "나눔고딕","nanum gothic", sans-serif;
+	font-size: 100%;
+    background:#fff; 
+}
+body a{
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+	text-decoration: none;
+}
+body a:HOVER
+{
+	text-decoration: none;
+	font-weight: 600;
+	color:#87d54d;
+}
+
+/*
+지향난 시작 css
+*/
+.siteline
+{
+	list-style: none; 
+	float: right; 
+	margin-top:20px; 
+	margin-bottom:20px;
+	font-size:10pt;
+	padding-right:40px;
+}
+.mtd1
+{
+	font-weight: 700;
+	padding-left:10px;
+	font-family:"나눔고딕";
+	background-color:#87d54d;
+	border-right: none;
+	font-size:14px;
+	
+}
+.mtd2
+{
+	padding-left:10px;
+	border-left:none;
+}
+.join
+{
+	width:100%;
+	margin:0 auto;
+	text-align: center;
+	padding-left: 15%;
+	padding-right:15%;
+}
+.join>ul>li
+{
+	width:100%;
+	list-style: none;
+	text-align: left;
+	float:left;
+	padding-bottom: 5px;
+	
+}
+.join>ul>li>img
+{
+	padding-right:5px;
+}
+.joinup
+{
+	width:100%;
+	margin:0 auto;
+	float: left;
+	margin-top:30px;
+	margin-bottom:30px;
+	text-align: center;
+}
+.inputstyle
+{
+	width:15%;
+	height: 25px; 
+}
+.inheight
+{
+	height: 25px; 
+}
+.pwdhint
+{
+	margin: 0 auto; 
+	float: left; 
+	padding-left:3px;
+}
+.checkin_out {
+	border:1px; 
+	height:43px; 
+	border-radius:3px;
+}
+
+#join
+{
+	background-color: #87d54d;
+	border: 2px solid;
+	padding: 5px 25px;
+	border-radius:10px;
+	font-size: 14x;
+	color: #fff;
+	font-weight:600 
+}
+.btn:LINK {
+	text-decoration: none;
+}
+.btn:VISITED {
+	text-decoration: none;
+}.btn:HOVER {
+	text-decoration: none;
+}
+.btn:ACTIVE {
+	text-decoration: none;
+}
+.install
+{
+	padding-top:7px;
+}
+.addrsearch
+{
+	border:1px solid #a9a9a9; 
+	border-radius:2px;
+}
+.hrline
+{
+	border: 1px solid;
+    width: 100%;
+    float: left;
+    border-color: #e2e2e2;
+    margin-top:5px;
+    margin-bottom:0px;
+}
+.lines
+{
+	vertical-align:middle;
+	width: 100%; 
+	border-top:2px solid #E2E2E2;
+	margin-top:5px;
+}
+.c_history
+{
+	float:left;
+}
+.c_img
+{
+	border:1px solid #e2e2e2; 
+	padding:12px 12px 12px 12px;
+	width:100%;
+	
+}
+.c_content
+{
+	border:1px solid #e2e2e2;
+	color:#f94b4b;
+	font-weight:700;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.lines2
+{
+	float:left;
+	width: 100%; 
+	border-top:2px solid #E2E2E2;
+	margin-top:30px;
+}
+.custom-file-input {
+	width:50%;
+	margin:0 auto;
+	float:left;
+  	color: transparent;
+  	background-color: #f4f4f4;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    
+   
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: '사진 추가';
+  color: black;
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+.input-file
+{
+	 background-color: #e2e2e2;
+    border: 1px solid #ababab;
+    border-radius: 3px;
+}
+.clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
+.clearfix:after{clear:both;}
+.hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
+.input-block-level{display:block;width:100%;min-height:30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.btn-file{overflow:hidden;position:relative;vertical-align:middle;}.btn-file>input{position:absolute;top:0;right:0;margin:0;opacity:0;filter:alpha(opacity=0);transform:translate(-300px, 0) scale(4);font-size:23px;direction:ltr;cursor:pointer;}
+.fileupload{margin-bottom:9px;}.fileupload .uneditable-input{display:inline-block;margin-bottom:0px;vertical-align:middle;cursor:text;}
+.fileupload .thumbnail{overflow:hidden;display:inline-block;margin-bottom:5px;vertical-align:middle;text-align:center;}.fileupload .thumbnail>img{display:inline-block;vertical-align:middle;max-height:100%;}
+.fileupload .btn{vertical-align:middle;}
+.fileupload-exists .fileupload-new,.fileupload-new .fileupload-exists{display:none;}
+.fileupload-inline .fileupload-controls{display:inline;}
+.fileupload-new .input-append .btn-file{-webkit-border-radius:0 3px 3px 0;-moz-border-radius:0 3px 3px 0;border-radius:0 3px 3px 0;}
+.thumbnail-borderless .thumbnail{border:none;padding:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
+.fileupload-new.thumbnail-borderless .thumbnail{border:1px solid #ddd;}
+.control-group.warning .fileupload .uneditable-input{color:#a47e3c;border-color:#a47e3c;}
+.control-group.warning .fileupload .fileupload-preview{color:#a47e3c;}
+.control-group.warning .fileupload .thumbnail{border-color:#a47e3c;}
+.control-group.error .fileupload .uneditable-input{color:#b94a48;border-color:#b94a48;}
+.control-group.error .fileupload .fileupload-preview{color:#b94a48;}
+.control-group.error .fileupload .thumbnail{border-color:#b94a48;}
+.control-group.success .fileupload .uneditable-input{color:#468847;border-color:#468847;}
+.control-group.success .fileupload .fileupload-preview{color:#468847;}
+.control-group.success .fileupload .thumbnail{border-color:#468847;}
+
+.jumbotron
+{
+	background-color: #f8f8f8;
+}
+
+.more
+{
+	background-color: #f94b4b;
+	font-size: 12px;
+	color:#fff;
+	font-weight:500;
+	border:1px solid #fff;
+	border-radius:5px;
+	padding:1px 4px;
+	
+}

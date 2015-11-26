@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+@media screen and (max-width: 768px) {
+	.mhide{     
+		display: none; 
+	}
+	/* .content::after{
+		content: attr(data-writer) " | " attr(data-date) " | 조회 " attr(data-hit);
+	} */
+}
+
+.list-group-item > span:not(.col-sm-6), .panel-heading > div {
+	text-align: center;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover {
+	background-color: #87d54d;
+  		border-color: #87d54d;
+}
+
+span.content {
+	font-size: 0.8em;
+   	padding-left: 0;
+   	color: #888;
+}
+
+.search-btn {
+	background-color: #F94B4B;
+	color: #ffffff;
+}
+
+.search-btn:hover {
+	background-color: #333;
+	color: #ffffff;
+}
+.inquire .form-horizontal .control-label {
+    text-align: left;
+}
