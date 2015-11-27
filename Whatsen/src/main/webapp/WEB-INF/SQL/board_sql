@@ -1,7 +1,11 @@
 --왓슨 게시판
+drop table ws_word;
+drop table ws_board;
+drop table rw_board;
+
 CREATE TABLE ws_Word(
-  sa_No NUMBER PRIMARY KEY NOT NULL,--말머리 번호 (pk)
-  sa_Name VARCHAR2(100), -- 말머리 이름
+  sa_No NUMBER PRIMARY KEY NOT NULL,
+  sa_Name VARCHAR2(100),
   sa_img VARCHAR2(100)
 );
 insert into ws_Word values (1, '공지사항', 'ico-list-notice.gif');
@@ -12,8 +16,8 @@ insert into ws_Word (sa_no,sa_name) values (3,' ');
 CREATE TABLE ws_board(
   b_no NUMBER PRIMARY KEY NOT NULL, 
   b_Id VARCHAR2(50), 
-  b_Title VARCHAR2(200) NOT NULL,
-  b_Content CLOB NOT NULL, 
+  b_Title VARCHAR2(200) not null,
+  b_Content CLOB not null, 
   b_Hit NUMBER, 
   b_Renum NUMBER, 
   b_Date DATE, 
