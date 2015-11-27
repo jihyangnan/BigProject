@@ -1,4 +1,17 @@
+drop table ws_board;
+drop table ws_word;
+drop table rw_board;
+
 --왓슨 게시판
+CREATE TABLE ws_Word(
+  sa_No NUMBER PRIMARY KEY NOT NULL,--말머리 번호 (pk)
+  sa_Name VARCHAR2(20), -- 말머리 이름
+  sa_img VARCHAR2(50)
+);
+insert into ws_Word values(1,'공지사항','ico-list-notice.gif');
+insert into ws_Word values(2,'HOT질문','ico-list-hot.png'); -- 자주 묻는 질문
+insert into ws_Word (sa_no,sa_name) values(3,' '); --회원들꺼는 공백으로 말머리 넣음
+
 CREATE TABLE ws_board(
   b_no NUMBER PRIMARY KEY NOT NULL, --글번호(pk)
   b_Id VARCHAR2(20), -- 작성자(fk)
@@ -7,33 +20,9 @@ CREATE TABLE ws_board(
   b_Hit NUMBER, -- 조회수
   b_Renum NUMBER, -- 답변수
   b_Date DATE, --등록일
-  b_saNo NUMBER REFERENCES b_Word(sa_No) -- 말머리 번호 (fk)
+  b_saNo NUMBER REFERENCES ws_Word(sa_No) -- 말머리 번호 (fk)
 );
 
-CREATE TABLE ws_Word(
-  sa_No NUMBER PRIMARY KEY NOT NULL,--말머리 번호 (pk)
-  sa_Name VARCHAR2(20), -- 말머리 이름
-  sa_img VARCHAR2(50)
-);
-
-CREATE TABLE Rw_board(
-  rw_No NUMBER PRIMARY KEY NOT NULL, --답글번호 (pk)
-  rw_Order NUMBER , --순서번호
-  rw_Content CLOB NOT NULL, --내용
-  rw_Id VARCHAR2(20), -- 작성자 (fk)
-  rw_Date DATE NOT NULL, --등록일
-  rw_bNo NUMBER REFERENCES p_Board(b_No), --그룹번호(fk)
-  group_id NUMBER,
-  group_tab NUMBER,
-  group_step NUMBER,
-  root NUMBER,
-  depth NUMBER
-);
-
-insert into ws_Word values(1,'공지사항','ico-list-notice.gif');
-insert into ws_Word values(2,'HOT질문','ico-list-hot.png'); -- 자주 묻는 질문
-insert into ws_Word (sa_no,sa_name) values(3,' '); --회원들꺼는 공백으로 말머리 넣음
-delete from ws_board;
 INSERT INTO ws_board values(1,'hong','질문있습니다1.','질문이 있었습니다.',0,0,SYSDATE,3);
 INSERT INTO ws_board values(2,'admin','공지사항입니다.','공지사항 있었습니다.',0,0,SYSDATE,1);
 INSERT INTO ws_board values(3,'admin','공지사항입니다','공지사항입니다',0,0,SYSDATE,1);
@@ -43,11 +32,21 @@ INSERT INTO ws_board values(6,'admin','공지사항입니다','공지사항입니다',0,0,SYSD
 INSERT INTO ws_board values(7,'hong','질문있습니다1.','질문이 있었습니다.',0,0,SYSDATE,3);
 INSERT INTO ws_board values(8,'hong','질문있습니다1.','질문이 있었습니다.',0,0,SYSDATE,3);
 INSERT INTO ws_board values(9,'hong','질문있습니다1.','질문이 있었습니다.',0,0,SYSDATE,3);
-select * from ws_board;
-commit;
 
-SELECT b_sano,b_no,b_id,b_title,dbday,b_hit,num 
-FROM(SELECT b_sano,b_no,b_id,b_title,TO_char(b_date,'YYYY-MM-DD')as dbday,b_hit,rownum as num 
-FROM(SELECT b_sano,b_no,b_id,b_title,b_date,b_hit 
-FROM ws_board WHERE b_sano=3 ORDER BY b_no DESC)) 
-WHERE b_sano=3 AND num BETWEEN 1 AND 10;
+CREATE TABLE rw_board(
+  rw_No NUMBER PRIMARY KEY NOT NULL, --답글번호 (pk)
+  rw_Order NUMBER , --순서번호
+  rw_Content CLOB NOT NULL, --내용
+  rw_Id VARCHAR2(20), -- 작성자 (fk)
+  rw_Date DATE NOT NULL, --등록일
+  rw_bNo NUMBER REFERENCES ws_board(b_No), --그룹번호(fk)
+  group_id NUMBER,
+  group_tab NUMBER,
+  group_step NUMBER,
+  root NUMBER,
+  depth NUMBER
+);
+
+select * from ws_board;
+select * from ws_Word;
+select * from rw_board;

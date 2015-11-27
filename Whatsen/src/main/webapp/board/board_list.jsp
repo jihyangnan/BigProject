@@ -92,12 +92,13 @@ function resizeBoard(){
 				<ol class="breadcrumb" style="background-color: #fff">
 				</ol>
 			</div>
-			<div align=center style="padding-bottom:30px">
+			<div align=left style="padding-bottom:10px; font-weight: 700;">
 				Q & A 게시판
 			</div>
 			<!--h3 class="m_3" style="margin-top: 50px; margin-bottom:50px; text-align: center; font-weight: bold;">자유 게시판</h3-->
-			<div class="list-group panel panel-default" style="border: 0">	
-				<div class="row mhide panel-heading" style="margin:0px;">
+			<div class="list-group panel panel-default" style="border:0">	
+				<div class="row mhide panel-heading" style="margin:0px; border:1px solid #ddd;
+					border-right:none; border-left:none;">
 					
 					<div class="col-sm-1" style="font-weight: 600">번호</div>
 					<div class="col-sm-6" style="font-weight: 600">제목</div>
@@ -108,7 +109,8 @@ function resizeBoard(){
 				
 				<!-- 관리자 -->
 				<c:forEach var="mdto" items="${mlist }" >
-				<div class="row list-group-item" style="margin:0px;">
+				<div class="row list-group-item" style="margin:0px; 
+					border-right:none; border-left:none;border-bottom:1px;">
 					<span class="col-sm-1 mhide">
 						<img src="../images/${mdto.sa_img }" /> 
 					</span>
@@ -133,7 +135,8 @@ function resizeBoard(){
 				
 				<!-- 회원목록 -->
 				<c:forEach var="dto" items="${list }" varStatus="status">
-				<div class="row list-group-item" style="margin:0px;">
+				<div class="row list-group-item" style="margin:0px; 
+						border-right:none; border-left:none;border-bottom:1px; ">
 					<!-- <img src="images/ico-list-notice.gif"> -->
 					<span class="col-sm-1">${dto.num }</span>
 					<span class="col-sm-6 col-xs-10" style="text-align:left;">
